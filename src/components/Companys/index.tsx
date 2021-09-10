@@ -28,25 +28,22 @@ function PrevButton ({ onClick,className }: Props) {
 
 
 
-export const Companys: FC = () => {
-
+export const Companys: FC = (props) => {
+	const { className,onClick } = props;
     
     interface BannerData {
     id:number,
     image:string
     }
     const [banners, setBanners] = useState<BannerData[]>([])
-
+	
     
 
 	useEffect(() => {
 		setBanners(Banners)
 	}, [])
 
-	interface settings{ 
-		onClick:any,
-		className:any
-	  }
+	
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -56,8 +53,8 @@ export const Companys: FC = () => {
 		autoplay: true,
 		autoplaySpeed: 3000,
         arrows:true,
-		nextArrow: <NextButton/>,
-		prevArrow: <PrevButton/>,
+		nextArrow: <NextButton className={className} onClick={onClick}/>,
+		prevArrow: <PrevButton className={className} onClick={onClick}/>,
         responsive: [
         {
   breakpoint: 568,
