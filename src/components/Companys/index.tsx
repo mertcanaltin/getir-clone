@@ -5,13 +5,8 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 import './companys.module.scss';
 
-type Props = {
-  onClick: React.MouseEventHandler<HTMLButtonElement>,
-  className: string
-}
-
 function NextButton(props: CustomArrowProps): JSX.Element {
-	const { className, style, onClick } = props;
+	const { className, onClick } = props;
 	return (
 		<button className={`${className} text-purple-700`} onClick={onClick}>
 			<IoIosArrowForward size={22} />
@@ -19,7 +14,7 @@ function NextButton(props: CustomArrowProps): JSX.Element {
 	)
   }
   function PrevButton(props: CustomArrowProps): JSX.Element {
-	const { className, style, onClick } = props;
+	const { className, onClick } = props;
 	return (
 		<button className={`${className} text-purple-700`} onClick={onClick}>
 			<IoIosArrowBack size={22} />
