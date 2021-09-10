@@ -1,5 +1,5 @@
 import {useState, useEffect,FC} from 'react'
-import Slider from "react-slick";
+import { default as Slider,CustomArrowProps } from "react-slick";
 import Banners from '../../api/banners.json'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
@@ -10,40 +10,41 @@ type Props = {
   className: string
 }
 
-
-function NextButton ({ onClick,className }: Props) {
+function NextButton(props: CustomArrowProps): JSX.Element {
+	const { className, style, onClick } = props;
 	return (
 		<button className={`${className} text-purple-700`} onClick={onClick}>
 			<IoIosArrowForward size={22} />
 		</button>
 	)
-}
-function PrevButton ({ onClick,className }: Props) {
+  }
+  function PrevButton(props: CustomArrowProps): JSX.Element {
+	const { className, style, onClick } = props;
 	return (
 		<button className={`${className} text-purple-700`} onClick={onClick}>
 			<IoIosArrowBack size={22} />
 		</button>
 	)
-}
+  }
 
 
 
-export const Companys: FC = (props) => {
-	const { className,onClick } = props;
+
+export const Companys: FC = () => {
+
     
     interface BannerData {
     id:number,
     image:string
     }
     const [banners, setBanners] = useState<BannerData[]>([])
-	
+
     
 
 	useEffect(() => {
 		setBanners(Banners)
 	}, [])
 
-	
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -53,8 +54,8 @@ export const Companys: FC = (props) => {
 		autoplay: true,
 		autoplaySpeed: 3000,
         arrows:true,
-		nextArrow: <NextButton className={className} onClick={onClick}/>,
-		prevArrow: <PrevButton className={className} onClick={onClick}/>,
+		nextArrow: <NextButton />,
+		prevArrow: <PrevButton />,
         responsive: [
         {
   breakpoint: 568,
