@@ -43,6 +43,10 @@ export const Companys: FC = () => {
 		setBanners(Banners)
 	}, [])
 
+	interface settings{ 
+		onClick:any,
+		className:any
+	  }
 	const settings = {
 		dots: false,
 		infinite: true,
