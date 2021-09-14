@@ -6,7 +6,7 @@ import {GetirWidgetMobil} from '../components/GetirWidgetMobil';
 import {CompanysYemek} from '../components/CompanysYemek';
 const HomePage: NextPage = () => {
     return (
-        <Layout title="Getir">
+        <Layout title="GetirYemek">
             
             <HomeSliderGetirYemek/>
             

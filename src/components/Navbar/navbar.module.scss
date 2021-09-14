@@ -12,6 +12,15 @@
     border-radius: 6px 6px 0px 0px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 760px) {
+    .nav-item {
+        padding: 0 !important;
+        height: 0 !important;
+        margin-top: -15px !important;
+    }
+}
+
 .nav-item img {
     filter: brightness(5%) invert(90%) sepia(72%) saturate(3333%)
         hue-rotate(180deg) contrast(102%);
