@@ -17,11 +17,14 @@ export const Navbar: FC<ILayoutProps> = ({ children,img }) => {
         <>
             <Box
                 sx={{
-                    height: '45px',
+                    height: { xs: '40px', md: '45px' },
                     backgroundColor: 'primary.dark',
                     overflow: 'hidden',
-                    paddingRight: '32px',
-                    paddingLeft: '32px',
+                    paddingRight: { xs: '6px', md: '32px' },
+                    paddingLeft: { xs: '6px', md: '32px' },
+                    position: { md:'sticky' },
+                    top: 0,
+                    zIndex: 100
                 }}
             >
                 <div className='container'>
