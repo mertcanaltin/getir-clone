@@ -1,4 +1,4 @@
-# geçir (getir clone)
+getir clone
 
 this project is clone project of getir made with NextJs and TailwindCss. \
 note[AZE]: bu layihə yalnız təhsil məqsədləri üçün hazırlanmışdır, fişinq üçün deyil! \
