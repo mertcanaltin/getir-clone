@@ -6,7 +6,7 @@ note[EN]: this project is only made for educational purposes and not for phishin
 
 ## installation
 
-use the package manager [npm](https://npmjs.com/) to install geçir.
+use the package manager [npm](https://npmjs.com/) to install getir clone.
 
 ```bash
 npm install
